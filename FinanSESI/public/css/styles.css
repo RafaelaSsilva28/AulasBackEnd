@@ -1,0 +1,142 @@
+body{
+    margin: 0;  
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #e7f3ff;
+    height: 100dvh;
+    display: flex;
+    flex-direction: column;
+}
+
+/*estilos para o cabeçalho*/
+header{
+    background-color: #1e90ff;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #ffff;
+    box-shadow: 0 3px 4px #555;
+}
+
+.logo{
+    font-size: 24px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+header > nav{
+    display: flex;
+    gap: 15px;
+}
+
+header > nav > a{
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+header > nav > a:hover{
+    text-decoration: underline;
+    color: aqua;
+    scale : 1.1;
+    transition: 0.1s;
+}
+
+/*estilo para o conteudo principal*/
+main{
+    flex: 1;
+    padding: 20px;  
+    margin: 20px;
+    box-shadow: 0 4px 6px #aaa;
+    background-color: white;
+    border-radius: 8px;
+}
+
+/*footer estilo do rodapé*/
+footer{
+    background-color: #1e90ff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    box-shadow: 0 -4px 4px #aaa;
+}
+
+.titulo{
+    text-align: center;
+    color: #1e90ff;
+    text-shadow: 0 2px #aaa;
+}
+
+form{
+    max-width: 400px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+input{
+    padding: 8px;
+}
+button{
+    background-color: #1e90ff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+} 
+
+button:hover{
+    background-color: #0d4073;
+}
+
+.resultado{
+    margin-top: 20px;
+    text-align: center;
+}
+
+.simples{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.simples > a{
+    text-decoration: none;
+    text-align: center;
+    border-radius: 5px;
+    padding: 10px;
+    box-shadow: 0 3px 5px #aaa;
+}
+
+.simples > a > img{
+    width: 100px;
+    height: 100px;
+}
+
+.composto{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.composto > a{
+    text-decoration: none;
+    text-align: center;
+    border-radius: 5px;
+    padding: 10px;
+    box-shadow: 0 3px 5px #aaa;
+}
+
+.composto > a > img{
+    width: 100px;
+    height: 100px;
+}
+
+.projeto{
+    color: #1e90ff;
+
+}
