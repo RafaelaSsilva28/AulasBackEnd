@@ -33,7 +33,7 @@ produtos.modelo = 'Galaxy S24';
     }
 
 
-
+//objetos alinhados 
 let aluno = {
     nome: 'Joquim',
     sexo: 'M',

@@ -1,0 +1,17 @@
+{
+    "nome": "Nico",
+    "filhote": "não tem",
+    "raca": "pinscher",
+    "vivo": true,
+    "companheira": [
+        {
+            "nome_comp": "Nina",
+            "raca": "pinscher",
+            "nasciment": "20 de Setembro",
+                "dono": {
+                    "nome_dono": "Vanessa",
+                    "idade": 38
+                }
+        }
+    ]
+}
