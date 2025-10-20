@@ -1,0 +1,29 @@
+<%- include('../includes/header.ejs', {titulo: 'Lista de Professores'}) %>
+
+<main>
+    <h2>Lista de Professores</h2>
+    <a href="/professores/novo"> Adicionar Professores</a>
+
+    <table class="dados-table">
+        <thead>
+            <tr>
+                <th>Nome</th>
+                <th>Telefone</th>
+                <th>Formação</th>
+                <th>Ações</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% for(let professor of dadosProfessores) { %>
+            <tr>
+                <td><% professor.nome_professor %></td>
+                <td><% professor.telefone %></td>
+                <td><% professor.formacao %></td>
+                <td></td>
+            </tr>
+            <% } %>
+        </tbody>
+    </table>
+</main>
+
+<%- include('../includes/footer.ejs') %>
