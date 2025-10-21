@@ -28,6 +28,10 @@ app.use('/admin', adminRotas); //Todas as rotas do admin começam com /admin
 const professoresRotas = require('./routes/professores')    //busca do arquivo routes/professores.js
 app.use('/professores', professoresRotas);
 
+//Importando rotas turmas
+const turmaRotas = require ('./routes/turmas')
+app.use('/turmas', turmaRotas);
+
 const porta = 3000;
 app.listen(porta, () => {
     console.log(`Servidor http://localhost:${porta}`);

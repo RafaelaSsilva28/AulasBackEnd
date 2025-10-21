@@ -2,7 +2,7 @@
 
 <main>
     <h2>Lista de Professores</h2>
-    <a href="/professores/novo"> Adicionar Professores</a>
+    <a href="/professores/novo" class="btn btn-principal"> Adicionar Professores</a>
 
     <table class="dados-table">
         <thead>
@@ -19,7 +19,10 @@
                 <td><%= professor.nome_professor %></td>
                 <td><%= professor.telefone %></td>
                 <td><%= professor.formacao %></td>
-                <td></td>
+                <td>
+                    <a href="#" class="btn btn-edit">Editar</a>
+                    <a href="#" class="btn btn-delete">Excluir</a>
+                </td>
             </tr>
             <% } %>
         </tbody>
