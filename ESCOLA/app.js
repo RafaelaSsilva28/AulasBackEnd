@@ -29,7 +29,7 @@ const professoresRotas = require('./routes/professores')    //busca do arquivo r
 app.use('/professores', professoresRotas);
 
 //Importando rotas turmas
-const turmaRotas = require ('./routes/turmas')
+const turmaRotas = require ('./routes/turmas.js')
 app.use('/turmas', turmaRotas);
 
 const porta = 3000;

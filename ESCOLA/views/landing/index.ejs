@@ -3,10 +3,46 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mogra&family=Permanent+Marker&display=swap" rel="stylesheet">
+    <title>Boas-Vindas</title>
+       <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'mogra': ["Mogra", system-ui]
+                    }
+                }
+            }
+        }
+    </script>
 </head>
 <body>
-    <h1>Bem vindo a escola SESI 025 Andradina</h1>
+    <div class="">
+    <div class="bg-[#007bff] p-10 shadow-lg flex justify-between items-center">
+        <h1 class="text-white font-bold text-shadow-lg  text-2xl"> ---------- Bem vindo a escola SESI 025 Andradina ----------</h1>
+         <nav class="flex justify-center gap-10">
+             <a href="#" class="text-white font-bold hover:text-blue-200 hover:scale-110 transition-transform duration-300">Home</a>
+             <a href="#" class="text-white font-bold hover:text-blue-200 hover:scale-110 transition-transform duration-300">Login</a>
+             <a href="#" class="text-white font-bold hover:text-blue-200 hover:scale-110 transition-transform duration-300">Catálogo</a>
+             </nav>
+        
+             <button onclick="location.reload()"class=" flex items-center text-white border rounded-lg px-2 py-2 shadow-lg "> Recarregar </button>
+        </div>
+    </div>
+    <main class="">
+        <img src="https://sesiac.org.br/images/2024/09/16/escola-sesi-001.jpg" alt="sesi" class="w-full h-90 ">
+        <div>
+        <img src="https://logodownload.org/wp-content/uploads/2016/10/sesi-logo-1.png" alt="sesi" class="w-100 mx-auto ">
+        <h3 class="text-blue-500 font-semibold font-[mogra] text-center text-4xl">O QUE OFERECEMOS: </h3>
+        </div>
         <a href="/admin/">Área administrativa</a>
+    </main>
+    <footer class="bg-[#007bff] p-10 ">
+        <h2></h2>
+    </footer>
 </body>
 </html>

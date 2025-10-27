@@ -98,3 +98,42 @@ h2{
 .btn:hover {
     opacity: 0.8;
 }
+
+.btn-secundario {
+    background-color: #6c757d;
+}
+
+.form{
+    max-width: 600px;
+    margin: 20px auto;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 20px;
+}
+
+.form-group{
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.form-group input {
+    border: 1px solid #ddd;
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 16;
+}
+
+.form-group input:focus {
+    border-color: #007bff;
+}
+
+.acoes {
+    display: flex;
+}
