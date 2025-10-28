@@ -1,0 +1,31 @@
+<%- include('../includes/header.ejs', {titulo: 'Lista de Disciplinas'}) %>
+
+<main>
+    <h2>Lista de Disciplinas</h2>
+    <a href="/disciplinas/novo" class="btn btn-principal"> Adicionar Disciplinas</a>
+
+    <table class="dados-table">
+        <thead>
+            <tr>
+                <th>Nome</th>
+                <th>Professor</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% for(let disciplina of dadosDisciplinas) { %>
+            <tr>
+                <td><%= disciplina.nome_disciplina %></td>
+                <td><%= disciplina.nome_professor %></td>
+                <td class="acoes">
+                    <a href="/disciplinas/editar/<%= disciplina.id_disciplina %>" class="btn btn-edit">Editar</a>
+                    <form action="/disciplinas/excluir/<%= disciplina.id_disciplina %>" method="POST">
+                        <button type="submit" class="btn btn-delete">Excluir</button>
+                    </form>
+                </td>
+            </tr>
+            <% } %>
+        </tbody>
+    </table>
+</main>
+
+<%- include('../includes/footer.ejs') %>

@@ -32,6 +32,12 @@ app.use('/professores', professoresRotas);
 const turmaRotas = require ('./routes/turmas.js')
 app.use('/turmas', turmaRotas);
 
+const disciplinasRotas = require ('./routes/disciplinas.js')
+app.use('/disciplinas', disciplinasRotas);
+
+const alunosRotas = require ('./routes/alunos.js')
+app.use('/alunos', alunosRotas);
+
 const porta = 3000;
 app.listen(porta, () => {
     console.log(`Servidor http://localhost:${porta}`);
