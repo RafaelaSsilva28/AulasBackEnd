@@ -1,10 +1,20 @@
-<%- include('../includes/header.ejs', {titulo: 'Lista de Disciplinas'}) %>
+<%- include('../includes/header.ejs', {titulo: 'Cadastro de Disciplinas'}) %>
 <main>
     <h2>Cadastro de Novas Disciplinas</h2>
     <form action="/disciplinas/novo" method="POST" class="form">
         <div class="form-group">
             <label>Nome da Disciplina</label>
             <input type="text" name="nome_disciplina" required>
+        </div>
+        <div class="form-group">
+            <label>Professor:</label>
+            <select name="id_professor" required>
+                <option value="">Selecione o Professor</option>
+                <!-- Gerando a lista de professores cadastrados -->
+                 <% for (let professor of dadosProfessores) { %>
+                    <option value="<%= professor.id_professor %>"><%= professor.nome_professor %></option>
+                 <% } %>
+            </select>
         </div>
     <button type="submit" class="btn btn-principal">Adicionar</button>
     <a href="/disciplinas/listar" class="btn btn-secundario">Cancelar</a>

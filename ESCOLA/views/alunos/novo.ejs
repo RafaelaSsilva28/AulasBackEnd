@@ -2,15 +2,38 @@
 <main>
     <h2>Cadastro de Novos Alunos</h2>
     <form action="/alunos/novo" method="POST" class="form">
-        <div class="form-group">
+            
             <label>Nome do Aluno</label>
             <input type="text" name="nome" required>
+
+            <label>Email do aluno</label>
+            <input type="text" name="email" required>
+            
             <label>Idade do Aluno</label>
             <input type="text" name="idade" required>
-            <label>Sexo do Aluno</label>
-            <input type="text" name="sexo" required>
-            <label>Turma do Aluno</label>
-            <input type="text" name="nome_turma" required>
+
+            <label>CPF</label>
+            <input type="text" name="cpf" required>
+
+            <label name="foto">Foto do Aluno</label>
+            <input type="text" name="foto" required>
+
+            <label>Sexo</label>
+            <select name="sexo" required>
+                <option value="M">Masculino</option>
+                <option value="F">Feminino</option>
+            </select>
+
+            </div>
+            
+            <label>Turma</label>
+            <select name="id_turma" required>
+                <option value="">Selecione a Turma</option>
+                <% for (let turma of dadosTurmas) { %>
+                    <option value="<%= turma.id_turma %>"><%= turma.nome_turma %></option>
+                 <% } %>
+            </select>
+            
         </div>
     <button type="submit" class="btn btn-principal">Adicionar</button>
     <a href="/alunos/listar" class="btn btn-secundario">Cancelar</a>

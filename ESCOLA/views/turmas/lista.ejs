@@ -4,6 +4,14 @@
     <h2>Lista das Turms</h2>
     <a href="/turmas/novo" class="btn btn-principal"> Adicionar Turmas</a>
 
+     <form action="/turmas/listar" method="GET" class="form form-consulta">
+        <input type="text" name="busca" placeholder="Buscar por Nome">
+        <select name="ordem">
+            <option value="nome_turma">Ordenar por Turma</option>
+        </select>
+        <button type="submit" class="btn btn-principal">Buscar</button>
+    </form>
+
     <table class="dados-table">
         <thead>
             <tr>

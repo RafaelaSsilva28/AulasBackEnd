@@ -5,8 +5,13 @@ const BD = require('../db')
 //listar prfessores (R-read)
    //localhost:3000/professores/listar 
 rotas.get('/listar', async (req, res) => {     
+
+    //armazenando o valor dentro do campo busca
+    const busca = req.query.busca || '';
+    const ordem = req.query.ordem || 'nome_professor';
+
     //BUSCANDO TODOS OS PROFESSORES DO BANCO DE DADOS
-    const dados = await BD.query('SELECT * FROM professores WHERE ativo = true order by nome_professor');
+const dados = await BD.query(`SELECT * FROM professores WHERE ativo = true AND nome_professor ILIKE $1 or formacao ILIKE $1 order by ${ordem}`, ['%' + busca + '%']);
         console.log(dados.rows);
         //BUSCANDO O ARQUIVO LISTA.EJS NA PASTA VIEWS/PROFESSORES
         res.render('professores/lista.ejs', { dadosProfessores: dados.rows });   //retorna os professores em formato de lista

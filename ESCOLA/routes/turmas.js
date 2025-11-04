@@ -3,8 +3,13 @@ const rotas = express.Router();
 const BD = require('../db')
 
 rotas.get('/listar', async (req, res) => {     
+
+     const busca = req.query.busca || '';
+    const ordem = req.query.ordem || 'nome_turma';
+
+
     //BUSCANDO TODOS OS PROFESSORES DO BANCO DE DADOS
-    const dados = await BD.query('SELECT * FROM turmas WHERE ativo = true order by nome_turma');
+    const dados = await BD.query(`SELECT * FROM turmas WHERE ativo = true AND nome_turma ILIKE $1 order by ${ordem}`, ['%' + busca + '%']);
         console.log(dados.rows);
         //BUSCANDO O ARQUIVO LISTA.EJS NA PASTA VIEWS/PROFESSORES
         res.render('turmas/lista.ejs', { dadosTurmas: dados.rows });   //retorna os professores em formato de lista

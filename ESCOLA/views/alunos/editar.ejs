@@ -1,0 +1,52 @@
+<%- include('../includes/header.ejs', {titulo: 'Cadastro de alunos'}) %>
+<main>
+    <h2>Atualizar dados de alunos</h2>
+    <form action="/alunos/editar/<%= aluno.id_aluno %>" method="POST" class="form">
+        <div class="form-group">
+            <label>Nome do aluno:</label>
+            <input type="text" name="nome" value="<%= aluno.nome %>" required>
+        </div>
+         <div class="form-group">
+            <label>Idade do aluno:</label>
+            <input type="text" name="idade" value="<%= aluno.idade %>" required>
+        </div>
+         <div class="form-group">
+            <label>CPF do aluno:</label>
+            <input type="text" name="cpf" value="<%= aluno.cpf %>" required>
+        </div>
+         <div class="form-group">
+            <label>email luno:</label>
+            <input type="text" name="email" value="<%= aluno.email %>" required>
+        </div>
+        <div class="form-group">
+            <label name="foto">Foto do aluno</label>
+            <input type="text" name="foto" value="<%= aluno.foto %>" required>
+        </div>
+         <div class="form-group">
+            <label>Sexo do aluno:</label>
+            <select name="sexo">
+                <option value="F">Feminino</option>
+                <option value="M">Masculino</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label>Turma:</label>
+            <select name="id_turma" required>
+                <option value="nome_turma">Selecione a Turma</option>
+                <!-- Gerando a lista de professores cadastrados -->
+                 <% for (let turma of dadosTurmas) { %>    
+                    <option value="<%= turma.id_turma %>" 
+                    <% if (aluno.id_turma == turma.id_turma)  { %>
+                            selected
+                   <% } %>    
+                    ><%= turma.nome_turma %></option>   
+                 <% } %>
+            </select>
+        </div>
+    <button type="submit" class="btn btn-principal">Salvar</button>
+    <a href="/alunos/listar" class="btn btn-secundario">Cancelar</a>
+</form>
+</main>
+
+<%- include('../includes/footer.ejs') %>

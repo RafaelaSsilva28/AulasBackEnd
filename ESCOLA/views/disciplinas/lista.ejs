@@ -4,11 +4,21 @@
     <h2>Lista de Disciplinas</h2>
     <a href="/disciplinas/novo" class="btn btn-principal"> Adicionar Disciplinas</a>
 
+     <form action="/disciplinas/listar" method="GET" class="form form-consulta">
+        <input type="text" name="busca" placeholder="Buscar por Nome ou Professor">
+        <select name="ordem">
+            <option value="id_professor">Ordenar por Professor</option>
+            <option value="nome_disciplina">Ordenar por Disciplina</option>
+        </select>
+        <button type="submit" class="btn btn-principal">Buscar</button>
+    </form>
+
     <table class="dados-table">
         <thead>
             <tr>
                 <th>Nome</th>
                 <th>Professor</th>
+                <th>Ações</th>
             </tr>
         </thead>
         <tbody>
